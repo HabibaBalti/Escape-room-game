@@ -43,38 +43,25 @@
 
   <!-- Game -->
   <section id="game" class="screen hidden">
-    <header class="hud">
-      <div class="hud-left">
+    <header class="topbar">
+      <div class="tb-left">
         <span id="room-name" class="room-name"></span>
         <span id="role-tag" class="role-tag"></span>
       </div>
-      <div class="hud-right">
+      <div class="tb-right">
         <span id="timer" class="timer">00:00</span>
+        <button id="hint-btn" class="ghost-btn">Hint</button>
         <button id="menu-btn" class="ghost-btn">Menu</button>
       </div>
     </header>
-    <p id="room-desc" class="room-desc"></p>
-    <main id="room" class="room"></main>
-    <footer class="inventory-bar">
-      <span class="inv-label">Inventory</span>
-      <div id="inventory" class="inventory"></div>
-    </footer>
-  </section>
-
-  <!-- Modal -->
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-box">
-      <div class="modal-head">
-        <h2 id="modal-title"></h2>
-        <button id="modal-close" class="ghost-btn" aria-label="Close">✕</button>
+    <div class="play">
+      <div class="stage-wrap">
+        <div id="stage"></div>
+        <div id="caption" class="caption"></div>
       </div>
-      <div id="modal-body" class="modal-body"></div>
-      <div class="modal-foot">
-        <button id="hint-btn" class="ghost-btn">Need a hint?</button>
-        <div id="hint-box" class="hint-box"></div>
-      </div>
+      <aside class="inv" id="inventory" aria-label="Inventory"></aside>
     </div>
-  </div>
+  </section>
 
   <!-- Menu -->
   <div id="menu" class="modal hidden" role="dialog" aria-modal="true">
@@ -88,7 +75,6 @@
     </div>
   </div>
 
-  <div id="toast" class="toast"></div>
 
   <script src="game.js"></script>
 </body>
